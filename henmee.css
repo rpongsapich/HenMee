@@ -72,6 +72,14 @@ nav#topMenu > a.sub > nav > a {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	min-width: 200px;
+}
+
+nav#topMenu > a.sub > nav > a:nth-of-type(n+8) {
+	display: inline-block;
+	width: 50px;
+	min-width: 0;
+	background-color: #e2e2e2;
 }
 
 nav#topMenu > a.sub > nav > a:hover {

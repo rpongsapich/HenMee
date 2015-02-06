@@ -76,7 +76,7 @@ function init_henmee() {
 function mod_topMenu() {
 	function appendSubMenu(target, items) {
 		$(items).each(function(i,n){
-			$(target).append('<a href="'+n.href+'">'+n.title+'</a>');
+			$(target).append('<a href="'+n.href+'" title="'+n.title+'">'+n.title+'</a>');
 		});
 	};
 	
