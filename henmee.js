@@ -1,4 +1,4 @@
-var SITEBASEURL = "http://hemee.dll.in.th/";
+var SITEBASEURL = "http://henmee.dll.in.th/";
 //========BROWSER SPECIFIC INIT=========//
 var XID = /xid=(\d+)/.exec(document.cookie) || false;
 XID = parseInt(XID[1] || 0) ;
@@ -64,6 +64,13 @@ function updateBookmarks() {
 
 function init_henmee() {
 	$(document.body).wrapInner('<div id="body"></div>');
+
+	// hmm tag short cut
+	$('form').on('submit', function(event){
+		$('textarea', this).val(function(index, value){
+			return value.replace(/\:hmm([0-9]+)\:/gm, "[img]"+SITEBASEURL+"hmm/hmm.php?n=$1[/img]");
+		});
+	});
 };
 
 function mod_topMenu() {
