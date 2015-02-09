@@ -66,7 +66,7 @@ function init_henmee() {
 	$(document.body).wrapInner('<div id="body"></div>');
 
 	// hmm tag short cut
-	$('form').on('submit', function(event){
+	$(document).on('submit', 'form', function(event){
 		$('textarea', this).val(function(index, value){
 			return value.replace(/\:hmm([0-9]+)\:/gm, "[img]"+SITEBASEURL+"hmm/hmm.php?n=$1[/img]");
 		});
