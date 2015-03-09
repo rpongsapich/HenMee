@@ -1,21 +1,21 @@
 {
 	"manifest_version": 2,
 	"name": "เห็นหมี",
-	"version": "2.0.1.1",
+	"version": "2.0.2",
 	"author": "illuminati",
 	"icons": {
 		"16": "icon.png",
 		"48": "icon.png",
 		"128": "icon.png"
 	},
-	"permissions": ["http://*.madoomee.com/", "http://*.madoomee.com:69/"],
+	"permissions": ["http://*.madoomee.com/", "http://*.madoomee.com:69/", "http://*.madoomeemk.com/*"],
 	"background": { "scripts":["background.js"], "persistent": false },
 	"options_page": "options.html",
 	"content_scripts": [{
-		"matches": ["http://madoomee.com/*", "http://madoomee.com:69/*"],
+		"matches": ["http://madoomee.com/*", "http://madoomee.com:69/*", "http://madoomeemk.com/*"],
 		"css": ["colorbox.css", "henmee.css"]
 	}, {
-		"matches": ["http://madoomee.com/*", "http://madoomee.com:69/*"],
+		"matches": ["http://madoomee.com/*", "http://madoomee.com:69/*", "http://madoomeemk.com/*"],
 		"js": ["jquery-2.1.1.min.js", "jquery.colorbox-min.js", "henmee.js"],
 		"run_at": "document_idle"
 	}]
